@@ -147,3 +147,28 @@ fizzBuzz([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 
 //33 % 10 = 3
 
+
+// Write a function that when given a particular number, console-logs its index in data array.
+
+const data = [12, 23, 28, 38, 40, 54, 62, 71, 87, 99, 200];
+
+const findIndex = (num) => {
+  for (let i = 0; i < data.length; i++) {
+    if (data[i] === num) {
+      console.log(`${num} found at index ${i}`);
+    }
+  }
+};
+
+/*findIndex(99);
+findIndex(87);
+findIndex(71);
+findIndex(62);
+findIndex(54);
+findIndex(40);
+findIndex(38);
+findIndex(28);
+findIndex(23);
+findIndex(12);*/
+
+findIndex(200);

@@ -1,0 +1,25 @@
+{
+  "name": "computer_science_and_javascript",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "experiment.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandertheGreat491/computer_science_and_javascript.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Alex Van Dyke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexandertheGreat491/computer_science_and_javascript/issues"
+  },
+  "homepage": "https://github.com/AlexandertheGreat491/computer_science_and_javascript#readme",
+  "dependencies": {
+    "benchmark": "^2.1.4"
+  }
+}

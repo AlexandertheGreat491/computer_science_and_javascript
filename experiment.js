@@ -124,8 +124,7 @@ var fizzBuzz = function (arr) {
     if (arr[i] % 3 == 0 && arr[i] % 5 !== 0) {
       console.log("Fizz");
       //console.log(arr[i] % 3);
-      
-    } 
+    }
 
     if (arr[i] % 5 == 0 && arr[i] % 3 !== 0) {
       console.log("Buzz");
@@ -141,24 +140,33 @@ var fizzBuzz = function (arr) {
   }
 };
 
-fizzBuzz([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 30, 40, 50]);
+fizzBuzz([
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 30, 40,
+  50,
+]);
 
 //100 % 2 = 0
 
 //33 % 10 = 3
 
-
 // Write a function that when given a particular number, console-logs its index in data array.
 
-const data = [12, 23, 28, 38, 40, 54, 62, 71, 87, 99, 200];
+/*const data = [12, 23, 28, 38, 40, 54, 62, 71, 87, 99, 200];
 
 const findIndex = (num) => {
+  //iterates over the data array
   for (let i = 0; i < data.length; i++) {
+    //if statement
+    //number from the data array is strictly equal to num
+    //index of that number is console logged
     if (data[i] === num) {
       console.log(`${num} found at index ${i}`);
+      break;
+      //loop stops running once the index is found
     }
+    
   }
-};
+};*/
 
 /*findIndex(99);
 findIndex(87);
@@ -171,4 +179,80 @@ findIndex(28);
 findIndex(23);
 findIndex(12);*/
 
-findIndex(200);
+//findIndex(200);
+
+/*Binary search continually divides the data in half based on whether the number I'm 
+looking for is greater or less than a chosen middle point*/
+
+/*const data = [12, 23, 38, 40, 54, 62, 71, 87, 99];
+
+const binarySearch = (arr, num) => {
+  //midpoints defined
+  let left = 0;
+  let right = arr.length - 1;
+  let middle = Math.floor((left + right) / 2);
+  //0 + 8 / 2 = 8 / 2 = 4 = index = 54
+  //midpoints are indexes not numbers
+
+  if (num === arr[middle]) {
+    return "found it";
+  } else if (num < arr[middle]) {
+    right = middle;
+    return `bring right down to ${right}`;
+  } else if (num > arr[middle]) {
+    left = middle + 1;
+    return `bring left up to ${left}`;
+  }
+};*/
+
+//console.log(binarySearch(data, 38));
+//console.log(binarySearch(data, 23));
+//console.log(binarySearch(data, 12));
+
+//prints bring right down to 4
+//because 23,38 is less than 54 (index 4) the midpoint that was selected
+
+//console.log(binarySearch(data, 71));
+//console.log(binarySearch(data, 87));
+//console.log(binarySearch(data, 99));
+
+//prints bring left up to 5 which is greater than the selected midpoint
+
+const askForFrind = () => {
+  inquirer
+    .prompt({
+      type: "input",
+      message: "Enter a name",
+      name: "frined",
+    })
+    .then(({ friend }) => {
+      console.log(`Hello, ${friend}!`);
+      askForFriend();
+    });
+};
+
+const data = [12, 23, 38, 40, 54, 62, 71, 87, 99];
+
+const binarySearch = (arr, num, left, right) => {
+  //defining the midpoint
+  let middle = Math.floor((left + right) / 2);
+
+  //range overlapped, so never found number
+  if (left > right) {
+    return -1;
+  }
+  else if (num === arr[middle]) {
+    return middle;
+  }
+  else if (num < arr[middle]) {
+    //call again with a new right value
+    return binarySearch(arr, num, left, middle - 1);
+  }
+  else {
+    //call again with a new left value
+    return binarySearch(arr, num, middle + 1, right);
+  }
+};
+
+//set initial left and right values on first call
+console.log(binarySearch(data, 12, 0, data.length - 1));

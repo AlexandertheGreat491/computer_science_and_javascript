@@ -117,7 +117,7 @@ Fizz
 // If a number is evenly divisible by both 3 AND 5, print "Fizz Buzz"
 // If a number is not divisible by 3 or 5, print the number
 
-var fizzBuzz = function (arr) {
+/*var fizzBuzz = function (arr) {
   for (let i = 0; i < arr.length; i++) {
     //console.log(arr[i]);
 
@@ -138,12 +138,12 @@ var fizzBuzz = function (arr) {
       console.log(arr[i]);
     }
   }
-};
+};*/
 
-fizzBuzz([
+/*fizzBuzz([
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 30, 40,
   50,
-]);
+]);*/
 
 //100 % 2 = 0
 
@@ -218,7 +218,7 @@ const binarySearch = (arr, num) => {
 
 //prints bring left up to 5 which is greater than the selected midpoint
 
-const askForFrind = () => {
+/*const askForFrind = () => {
   inquirer
     .prompt({
       type: "input",
@@ -229,9 +229,9 @@ const askForFrind = () => {
       console.log(`Hello, ${friend}!`);
       askForFriend();
     });
-};
+};*/
 
-const data = [12, 23, 38, 40, 54, 62, 71, 87, 99];
+/*const data = [12, 23, 38, 40, 54, 62, 71, 87, 99];
 
 const binarySearch = (arr, num, left, right) => {
   //defining the midpoint
@@ -255,4 +255,28 @@ const binarySearch = (arr, num, left, right) => {
 };
 
 //set initial left and right values on first call
-console.log(binarySearch(data, 12, 0, data.length - 1));
+console.log(binarySearch(data, 12, 0, data.length - 1));*/
+
+//Bubble sort
+/*An algorithm in CS that involves comparing 2 indexes side-by-side, where if the index on the right is smaller
+then the indexes will be swapped.*/
+
+//Bubble sort as a nested for loop
+
+//const data = [12, 23, 38, 40, 54, 62, 71, 87, 99];
+
+/*const bubbleSort = (arr) => {
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = 0; j < arr.length - 1; j++) {
+      //compare arr[j] to arr[j+1]
+      //swap places if needed
+    }
+  }
+
+  return arr;
+};*/
+
+//console.log(data);
+
+
+

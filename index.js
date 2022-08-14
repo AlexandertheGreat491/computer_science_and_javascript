@@ -28,10 +28,11 @@ suite
 
 const Benchmark = require("benchmark");
 const { bubbleSort } = require("./sort");
+const {quickSort} = require('./sort');
 
 const numbers = [];
 for (let i = 0; i < 10000; i++) {
-  numbers.push(Math.floor(Math.random() * 20000) + 1);
+  numbers.push(Math.floor(Math.random() * 10000) + 1);
 }
 
 const suite = new Benchmark.Suite();
@@ -39,7 +40,13 @@ const suite = new Benchmark.Suite();
 suite
   .add("bubble sort", function () {
     const testArray = [...numbers];
+
     bubbleSort(testArray);
+  })
+  .add('quick sort', function() {
+    const testArray = [...numbers];
+
+    quickSort(testArray);
   })
   .on("complete", function () {
     this.forEach((result) =>

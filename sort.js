@@ -48,6 +48,11 @@ push into right*/
 //return sorted left array + pivot + sorted right array
 
 const quickSort = (arr) => {
+  //don't quick-sort a small array; just return it immediately
+  if (arr.length <= 1) {
+    return arr;
+  }
+
   // use first index as the pivot point
   const pivot = arr[0];
   const left = [];
@@ -64,7 +69,7 @@ const quickSort = (arr) => {
   }
 
   //merge arrays and pivot together
-  return left.concat(pivot, right);
+  return quickSort(left).concat(pivot, quickSort(right));
 };
 
 // export along with bubble sort

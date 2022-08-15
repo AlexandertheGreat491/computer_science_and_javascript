@@ -56,17 +56,39 @@ suite
   })
   .run();*/
 
-  //Fibonacci sequence
+//Fibonacci sequence
 //My solution
 
-  /* I need two higher-level variables to track the value that is currently appearing the most and how many
+/* I need two higher-level variables to track the value that is currently appearing the most and how many
   times it is appearing.*/
 
-  /*Compare every item in the array to every other item and count 
+/*Compare every item in the array to every other item and count 
   how many times they match. */
 
-  /*Refactor as needed */
+/*Refactor as needed */
 
-  
+//const numbers = [41, 24, 28, 1, 40, 41, 32, 33, 50, 5, 34, 5, 21, 21, 43, 43, 21, 4, 49, 24];
 
-  //const numbers = [41, 24, 28, 1, 40, 41, 32, 33, 50, 5, 34, 5, 21, 21, 43, 43, 21, 4, 49, 24];
+const Benchmark = require("benchmark");
+const { mostDuplicates } = require("./dupes");
+
+const numbers = [];
+for (let i = 0; i < 10000; i++) {
+  numbers.push(Math.floor(Math.random() * 40000) + 1);
+}
+
+const suite = new Benchmark.Suite();
+
+suite
+  .add("duplicates test", function () {
+    mostDuplicates(numbers);
+  })
+  .on("complete", function () {
+    this.forEach((result) =>
+      console.log(
+        `${result.name} averaged ${result.stats.mean * 1000} milliseconds.`
+      )
+    );
+  })
+
+  .run();

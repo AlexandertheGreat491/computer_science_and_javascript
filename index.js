@@ -70,7 +70,7 @@ suite
 //const numbers = [41, 24, 28, 1, 40, 41, 32, 33, 50, 5, 34, 5, 21, 21, 43, 43, 21, 4, 49, 24];
 
 const Benchmark = require("benchmark");
-const { mostDuplicates } = require("./dupes");
+const { mostDuplicates, optimizedDuplicates } = require("./dupes");
 
 const numbers = [];
 for (let i = 0; i < 10000; i++) {
@@ -82,6 +82,9 @@ const suite = new Benchmark.Suite();
 suite
   .add("duplicates test", function () {
     mostDuplicates(numbers);
+  })
+  .add("optimized test", function() {
+    optimizedDuplicates(numbers);
   })
   .on("complete", function () {
     this.forEach((result) =>

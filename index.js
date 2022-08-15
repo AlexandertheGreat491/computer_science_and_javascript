@@ -26,7 +26,7 @@ suite
 
   .run();*/
 
-const Benchmark = require("benchmark");
+/*const Benchmark = require("benchmark");
 const { bubbleSort } = require("./sort");
 const {quickSort} = require('./sort');
 
@@ -54,4 +54,19 @@ suite
   .on('complete', function() {
     this.forEach(result => console.log(`${result.name} averaged ${result.stats.mean*1000} milliseconds.`));
   })
-  .run();
+  .run();*/
+
+  //Fibonacci sequence
+//My solution
+
+  /* I need two higher-level variables to track the value that is currently appearing the most and how many
+  times it is appearing.*/
+
+  /*Compare every item in the array to every other item and count 
+  how many times they match. */
+
+  /*Refactor as needed */
+
+  
+
+  //const numbers = [41, 24, 28, 1, 40, 41, 32, 33, 50, 5, 34, 5, 21, 21, 43, 43, 21, 4, 49, 24];

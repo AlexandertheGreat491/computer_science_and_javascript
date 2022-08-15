@@ -278,17 +278,17 @@ then the indexes will be swapped.*/
 
 //console.log(data);
 
-//Fibonacci sequence pseudocode
+// Fibonacci sequence pseudocode
 
-//1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, etc ...
+// 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, etc ...
 
-//if num <= 2
-//return 1 (the first two numbers in sequence)
+// if num <= 2
+// return 1 (the first two numbers in sequence)
 
-//otherwise return
-//same logic with num - 1
-//plus
-//same logic with num - 2
+// otherwise return
+// same logic with num - 1
+// plus
+// same logic with num - 2
 
 //adds the number 1 over and over again until the desired result is reached
 
@@ -304,6 +304,6 @@ then the indexes will be swapped.*/
 
 // return last item in array
 
-//main difference is that the numbers are put into an array in the second example
+// main difference is that the numbers are put into an array in the second example
 
 
